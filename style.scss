@@ -1,0 +1,48 @@
+//cool staff
+//variables use
+$colorDark:#222;
+$colorLight:green;
+$size:100px;
+
+body{
+    background: $colorDark;
+}
+
+button{
+    
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+    color: white;
+    border:darken($colorLight,7%) solid 3px;
+    outline:none;
+    background-image:
+        linear-gradient(darken($colorLight,7%),
+        lighten($colorLight,60%),
+        darken($colorLight,7%));
+    cursor:pointer;
+    box-shadow: 0 0 $size/30 $size/100 darken($colorDark,7%);;
+    text-shadow:0px $size/60 $size/100 darken($colorLight,100%);
+    font-size: $size/5;
+}
+button:hover{
+    box-shadow: 0 0 $size/20 $size/20 darken($colorDark,7%);
+    background-image:
+        linear-gradient(lighten($colorLight,70%),darken($colorLight,7%),lighten($colorLight,70%));
+    border-color: darken($colorLight,7%);
+
+}
+
+button:active{
+    
+    animation: shake 90ms;
+
+}
+
+@keyframes shake{
+    0% { transform:rotate(15deg);
+        color: $colorLight;}
+    50% {transform:rotate(0deg);
+        color:$colorLight; ;}
+    100%{transform:rotate(-15deg)}}
+
